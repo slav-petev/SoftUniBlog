@@ -1,0 +1,61 @@
+﻿@model IEnumerable<SoftUniBlog.Models.Post>
+@using SoftUniBlog.classes;
+
+@{
+    ViewBag.Title = "Forum";
+}
+
+<h2>Forum</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Title
+        </th>
+        <th>
+            Content
+        </th>
+        <th>
+            Date
+        </th>
+        <th>
+            Author
+        </th>
+        <th>
+            Options
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Utils.cutText(item.Body)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date)
+        </td>
+        <td>
+            @if(item.Author != null)
+            {
+                @item.Author.UserName;
+            }
+            else
+            {
+                @: <i>(няма автор)</i>
+            }
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
