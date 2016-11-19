@@ -20,7 +20,12 @@
                 @Html.ActionLink("Fitness Equipment", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
+
                 <ul class="nav navbar-nav">
+                    <li>
+                        <img src="@Url.Action("UserPhotos", "Home" )" height="48" width="48" />
+
+                    </li> 
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("Forum", "Index", "Posts")</li>
                     <li>@Html.ActionLink("New Topic", "Create", "Posts")</li>

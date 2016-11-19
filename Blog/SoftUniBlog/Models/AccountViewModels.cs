@@ -79,9 +79,10 @@ namespace SoftUniBlog.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+        [Display(Name = "UserPhoto")]
+        public byte[] UserPhoto { get; set; }
 
-      
-        [Display(Name = "Пълно име")]
+        [Display(Name = "Full Name")]
         public string FullName { get; set; }
     }
 
