@@ -200,6 +200,8 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PostsController.cs" />
+    <Compile Include="Controllers\ProfessionalEquipmentController.cs" />
+    <Compile Include="Controllers\SemiProfessionalController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -214,6 +216,10 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\SoftUniBlog.mdf" />
+    <Content Include="App_Data\SoftUniBlog_log.ldf">
+      <DependentUpon>SoftUniBlog.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
@@ -275,10 +281,13 @@
     <Content Include="Views\Posts\Details.cshtml" />
     <Content Include="Views\Posts\Edit.cshtml" />
     <Content Include="Views\Posts\Index.cshtml" />
+    <Content Include="Views\Manage\ChangeImage.cshtml" />
+    <Content Include="Views\Home\ProffesionalEquipment.cshtml" />
+    <Content Include="Views\ProfessionalEquipment\Index.cshtml" />
+    <Content Include="Views\ProfessionalEquipment\Create.cshtml" />
+    <Content Include="Views\SemiProfessional\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />

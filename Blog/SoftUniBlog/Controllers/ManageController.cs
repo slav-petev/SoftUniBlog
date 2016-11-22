@@ -7,12 +7,14 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using SoftUniBlog.Models;
+using System.IO;
 
 namespace SoftUniBlog.Controllers
 {
     [Authorize]
     public class ManageController : Controller
     {
+
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
 
@@ -32,9 +34,9 @@ namespace SoftUniBlog.Controllers
             {
                 return _signInManager ?? HttpContext.GetOwinContext().Get<ApplicationSignInManager>();
             }
-            private set 
-            { 
-                _signInManager = value; 
+            private set
+            {
+                _signInManager = value;
             }
         }
 
@@ -73,6 +75,37 @@ namespace SoftUniBlog.Controllers
                 BrowserRemembered = await AuthenticationManager.TwoFactorBrowserRememberedAsync(userId)
             };
             return View(model);
+        }
+
+        public ActionResult ChangeImage()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult ChangeImage(string test)
+        {
+            byte[] imageData = null;
+            if (Request.Files.Count > 0)
+            {
+                HttpPostedFileBase poImgFile = Request.Files["UserPhoto"];
+
+                using (var binary = new BinaryReader(poImgFile.InputStream))
+                {
+                    imageData = binary.ReadBytes(poImgFile.ContentLength);
+
+                    var context = new ApplicationDbContext();
+
+                    string userId = User.Identity.GetUserId();
+                    var currentUser = context.Users.FirstOrDefault(x => x.Id == userId);
+
+                    currentUser.UserPhoto = imageData;
+                    context.SaveChanges();
+                }
+            }
+
+
+            return RedirectToAction("Index");
         }
 
         //
@@ -333,7 +366,7 @@ namespace SoftUniBlog.Controllers
             base.Dispose(disposing);
         }
 
-#region Helpers
+        #region Helpers
         // Used for XSRF protection when adding external logins
         private const string XsrfKey = "XsrfId";
 
@@ -384,6 +417,6 @@ namespace SoftUniBlog.Controllers
             Error
         }
 
-#endregion
+        #endregion
     }
 }

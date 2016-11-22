@@ -19,6 +19,10 @@ namespace shanuMVCProfileImage.Controllers
             return View();
         }
 
+        public ActionResult ProffesionalEqipment()
+        {
+            return View("ProffesionalEqipment");
+        }
 
 
         public FileContentResult UserPhotos()
