@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using SoftUniBlog.Models;
+using System.Web.Security;
 
 namespace SoftUniBlog.Controllers
 {
@@ -19,6 +20,10 @@ namespace SoftUniBlog.Controllers
         public ActionResult Index()
         {
             var postsWithAuthors = db.Posts.Include(p => p.Author).ToList();
+
+            var currentUserEmail = User.Identity.Name;
+
+            ViewBag.CurrentUserEmail = currentUserEmail;
             return View(postsWithAuthors);
         }
 
@@ -66,7 +71,6 @@ namespace SoftUniBlog.Controllers
         }
 
         // GET: Posts/Edit/5
-        [Authorize(Roles ="Administrators")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -101,7 +105,6 @@ namespace SoftUniBlog.Controllers
         }
 
         // GET: Posts/Delete/5
-        [Authorize(Roles = "Administrators")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -113,13 +116,42 @@ namespace SoftUniBlog.Controllers
             {
                 return HttpNotFound();
             }
-            
+
+            if (!UserIsAuthorized(post))
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.Unauthorized);
+            }
+
+
             return View(post);
+        }
+
+        private bool UserIsAuthorized(Post post)
+        {
+            var context = new ApplicationDbContext();
+
+            var currentUserUsername = User.Identity.Name;
+            var currentUser = context.Users.First(a => a.Email == currentUserUsername);
+
+            bool isAuthorized;
+
+            var userIsAuthor = post.Author_Id == currentUser.Id;
+            var userIsAdmin = User.IsInRole("Administrators");
+
+            if (userIsAuthor || userIsAdmin)
+            {
+                isAuthorized = true;
+            }
+            else
+            {
+                isAuthorized = false;
+            }
+
+            return isAuthorized;
         }
 
         // POST: Posts/Delete/5
         [HttpPost, ActionName("Delete")]
-        [Authorize(Roles = "Administrators")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {

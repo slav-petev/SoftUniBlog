@@ -29,22 +29,22 @@
         </th>
     </tr>
 
-    @foreach (var item in Model)
+    @foreach (var post in Model)
     {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Title)
+                @Html.DisplayFor(modelItem => post.Title)
             </td>
             <td>
-                @Utils.cutText(item.Body)
+                @Utils.cutText(post.Body)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Date)
+                @Html.DisplayFor(modelItem => post.Date)
             </td>
             <td>
-                @if (item.Author != null)
+                @if (post.Author != null)
                 {
-                    @item.Author.UserName;
+                    @post.Author.UserName;
                 }
                 else
                 {
@@ -52,21 +52,21 @@
             }
             </td>
             <td>
-                @if (User.IsInRole("Administrators"))
+                @if (User.IsInRole("Administrators") || ViewBag.CurrentUserEmail == post.Author.Email)
                 {
                     <div>
-                        @Html.ActionLink("Details", "Details", new { id = item.ID })
+                        @Html.ActionLink("Details", "Details", new { id = post.ID })
                     </div>
                      <div>
-                        @Html.ActionLink("Edit", "Edit", new { id = item.ID })
+                        @Html.ActionLink("Edit", "Edit", new { id = post.ID })
                     </div>                 
                     <div>
-                        @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                        @Html.ActionLink("Delete", "Delete", new { id = post.ID })
                     </div>
                 }
                 else
                 {
-                    @Html.ActionLink("Details", "Details", new { id = item.ID })
+                    @Html.ActionLink("Details", "Details", new { id = post.ID })
                 }
 
 
