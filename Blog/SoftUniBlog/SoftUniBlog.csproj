@@ -198,6 +198,7 @@
     <Compile Include="classes\Utils.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CardioEquipmentController.cs" />
+    <Compile Include="Controllers\FoodAdditivesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HomeEquipmentController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -290,6 +291,7 @@
     <Content Include="Views\SemiProfessional\Index.cshtml" />
     <Content Include="Views\CardioEquipment\Index.cshtml" />
     <Content Include="Views\HomeEquipment\Index.cshtml" />
+    <Content Include="Views\FoodAdditives\Index.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
