@@ -197,7 +197,9 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="classes\Utils.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CardioEquipmentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\HomeEquipmentController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PostsController.cs" />
     <Compile Include="Controllers\ProfessionalEquipmentController.cs" />
@@ -286,6 +288,8 @@
     <Content Include="Views\ProfessionalEquipment\Index.cshtml" />
     <Content Include="Views\ProfessionalEquipment\Create.cshtml" />
     <Content Include="Views\SemiProfessional\Index.cshtml" />
+    <Content Include="Views\CardioEquipment\Index.cshtml" />
+    <Content Include="Views\HomeEquipment\Index.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
