@@ -36,6 +36,14 @@
         </dd>
 
     </dl>
+    @for (int i = 0; i < Model.Comments.Count; i++)
+    {
+        <h1>@Model.Comments[i].Name</h1>
+    }
+    <form action="/comment/create" method="post">
+        <input type="text" name="name" class="form-control" />
+        <input type="submit" />
+    </form>
 </div>
 <p>
     @if (ViewBag.IsUserAuthorized)

@@ -12,6 +12,7 @@ namespace SoftUniBlog.Models
         public Post()
         {
             this.Date = DateTime.Now;
+            this.Comments = new List<Comment>();
         }
 
         [Key]
@@ -27,10 +28,12 @@ namespace SoftUniBlog.Models
         [Required]
         public DateTime Date { get; set; }
         public string Author_Id { get; set; }
-        [ForeignKey("Author_Id")]
 
+        [ForeignKey("Author_Id")]
         public ApplicationUser Author { get; set; }
-        
+
+        public IList<Comment> Comments { get; set; }
+
     }
         
 }
