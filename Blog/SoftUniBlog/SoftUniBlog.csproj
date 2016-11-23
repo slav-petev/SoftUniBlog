@@ -201,6 +201,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CardioEquipmentController.cs" />
     <Compile Include="Controllers\CommentBoxController.cs" />
+    <Compile Include="Controllers\ContactsController.cs" />
     <Compile Include="Controllers\FoodAdditivesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HomeEquipmentController.cs" />
@@ -300,6 +301,7 @@
     <Content Include="Views\HomeEquipment\Index.cshtml" />
     <Content Include="Views\FoodAdditives\Index.cshtml" />
     <Content Include="Views\CommentBox\Index.cshtml" />
+    <Content Include="Views\Contacts\Index.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
