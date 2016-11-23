@@ -245,7 +245,17 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\Club-Series-Treadmill-l.png" />
     <Content Include="Images\noImg.png" />
+    <Content Include="Images\Profesional 1.png.png" />
+    <Content Include="Images\Professinal Bench Press.png" />
+    <Content Include="Images\Professional  Gladiator.png" />
+    <Content Include="Images\Professional  Squat Stand.png" />
+    <Content Include="Images\Professional Cardio Bike.png" />
+    <Content Include="Images\Professional Crossover.png" />
+    <Content Include="Images\Professional Leg Press.png" />
+    <Content Include="Images\Professional Scott Bench.png" />
+    <Content Include="Images\Professional Smith Machine.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
