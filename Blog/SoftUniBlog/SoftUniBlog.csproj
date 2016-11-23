@@ -209,6 +209,13 @@
     <Compile Include="Controllers\PostsController.cs" />
     <Compile Include="Controllers\ProfessionalEquipmentController.cs" />
     <Compile Include="Controllers\SemiProfessionalController.cs" />
+    <Compile Include="feedback.aspx.cs">
+      <DependentUpon>feedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="feedback.aspx.designer.cs">
+      <DependentUpon>feedback.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -216,8 +223,8 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
-    <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\Post.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -234,6 +241,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
+    <Content Include="feedback.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -310,8 +318,8 @@
     <Content Include="Views\CardioEquipment\Index.cshtml" />
     <Content Include="Views\HomeEquipment\Index.cshtml" />
     <Content Include="Views\FoodAdditives\Index.cshtml" />
-    <Content Include="Views\CommentBox\Index.cshtml" />
     <Content Include="Views\Contacts\Index.cshtml" />
+    <Content Include="Views\CommentBox\View.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

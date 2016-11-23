@@ -8,7 +8,6 @@ namespace SoftUniBlog.Models
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-        public DbSet<Post> Posts { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
@@ -18,5 +17,9 @@ namespace SoftUniBlog.Models
         {
             return new ApplicationDbContext();
         }
+
+        public virtual DbSet<Comment> Comments { get; set; }
+        public virtual DbSet<Post> Posts { get; set; }
+
     }
 }
