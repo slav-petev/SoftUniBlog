@@ -80,6 +80,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -198,6 +200,8 @@
     <Compile Include="classes\Utils.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CardioEquipmentController.cs" />
+    <Compile Include="Controllers\CommentBoxController.cs" />
+    <Compile Include="Controllers\ContactsController.cs" />
     <Compile Include="Controllers\FoodAdditivesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HomeEquipmentController.cs" />
@@ -219,6 +223,10 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\CommentBox.mdf" />
+    <Content Include="App_Data\CommentBox_log.ldf">
+      <DependentUpon>CommentBox.mdf</DependentUpon>
+    </Content>
     <Content Include="App_Data\SoftUniBlog.mdf" />
     <Content Include="App_Data\SoftUniBlog_log.ldf">
       <DependentUpon>SoftUniBlog.mdf</DependentUpon>
@@ -302,6 +310,8 @@
     <Content Include="Views\CardioEquipment\Index.cshtml" />
     <Content Include="Views\HomeEquipment\Index.cshtml" />
     <Content Include="Views\FoodAdditives\Index.cshtml" />
+    <Content Include="Views\CommentBox\Index.cshtml" />
+    <Content Include="Views\Contacts\Index.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
