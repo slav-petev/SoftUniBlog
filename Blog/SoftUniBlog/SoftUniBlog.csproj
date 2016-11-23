@@ -201,6 +201,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CardioEquipmentController.cs" />
     <Compile Include="Controllers\CommentBoxController.cs" />
+    <Compile Include="Controllers\ContactsController.cs" />
     <Compile Include="Controllers\FoodAdditivesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HomeEquipmentController.cs" />
@@ -223,7 +224,7 @@
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\CommentBox.cs" />
+    <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\Post.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -307,7 +308,8 @@
     <Content Include="Views\CardioEquipment\Index.cshtml" />
     <Content Include="Views\HomeEquipment\Index.cshtml" />
     <Content Include="Views\FoodAdditives\Index.cshtml" />
-    <Content Include="Views\CommentBox\Index.cshtml" />
+    <Content Include="Views\Contacts\Index.cshtml" />
+    <Content Include="Views\CommentBox\View.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

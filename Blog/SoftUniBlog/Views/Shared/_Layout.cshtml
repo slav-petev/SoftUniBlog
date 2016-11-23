@@ -10,9 +10,9 @@
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
+        <div class="container-fluid">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -25,16 +25,26 @@
                     <li>
                         <img src="@Url.Action("UserPhotos", "Home" )" height="48" width="48" />
 
-                    </li> 
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Forum", "Index", "Posts")</li>
-                    <li>@Html.ActionLink("New Topic", "Create", "Posts")</li>
-                    <li>@Html.ActionLink("Professional Equipment", "Index", "ProfessionalEquipment")</li>
-                    <li>@Html.ActionLink("Semi-Professional Equipment", "Index", "SemiProfessional")</li>
-                    <li>@Html.ActionLink("Cardio Equipment", "Index", "CardioEquipment")</li>
-                    <li>@Html.ActionLink("Home Equipment", "Index", "HomeEquipment")</li>
-                    <li>@Html.ActionLink("Food Addivites", "Index", "FoodAdditives")</li>
+                    </li>
 
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    @*<li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Equipment <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">*@
+                            <li>@Html.ActionLink("Professional Equipment", "Index", "ProfessionalEquipment")</li>
+                            <li>@Html.ActionLink("Semi-Professional Equipment", "Index", "SemiProfessional")</li>
+                            <li>@Html.ActionLink("Cardio Equipment", "Index", "CardioEquipment")</li>
+                            <li>@Html.ActionLink("Home Equipment", "Index", "HomeEquipment")</li>
+                        @*</ul>
+                    </li>*@
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Contact us <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>@Html.ActionLink("Forum", "Index", "Posts")</li>
+                            <li>@Html.ActionLink("New Topic", "Create", "Posts")</li>
+                            <li>@Html.ActionLink("Contacts", "Index", "Contacts")</li>
+                        </ul>
+                    </li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
