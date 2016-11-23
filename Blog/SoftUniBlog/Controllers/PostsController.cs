@@ -39,6 +39,9 @@ namespace SoftUniBlog.Controllers
             {
                 return HttpNotFound();
             }
+
+            ViewBag.IsUserAuthorized = IsUserAuthorized(post);
+
             return View(post);
         }
 
@@ -82,7 +85,14 @@ namespace SoftUniBlog.Controllers
             {
                 return HttpNotFound();
             }
+
+            if (!IsUserAuthorized(post))
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.Unauthorized);
+            }
+
             var authors = db.Users.ToList();
+
             ViewBag.Authors = authors;
             return View(post);
         }
@@ -91,14 +101,19 @@ namespace SoftUniBlog.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [Authorize(Roles = "Administrators")]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,Title,Body,Date,Author_Id")] Post post)
+        public ActionResult Edit([Bind(Include = "ID,Title,Body,Author_Id")] Post post)
         {
+            if (!IsUserAuthorized(post))
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.Unauthorized);
+            }
+
             if (ModelState.IsValid)
             {
                 db.Entry(post).State = EntityState.Modified;
                 db.SaveChanges();
+                    
                 return RedirectToAction("Index");
             }
             return View(post);
@@ -117,7 +132,7 @@ namespace SoftUniBlog.Controllers
                 return HttpNotFound();
             }
 
-            if (!UserIsAuthorized(post))
+            if (!IsUserAuthorized(post))
             {
                 return new HttpStatusCodeResult(HttpStatusCode.Unauthorized);
             }
@@ -126,7 +141,7 @@ namespace SoftUniBlog.Controllers
             return View(post);
         }
 
-        private bool UserIsAuthorized(Post post)
+        private bool IsUserAuthorized(Post post)
         {
             var context = new ApplicationDbContext();
 
