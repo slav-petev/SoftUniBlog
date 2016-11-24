@@ -41,6 +41,7 @@
             <td>
                 @Html.DisplayFor(modelItem => post.Date)
             </td>
+           
             <td>
                 @if (post.Author != null)
                 {
@@ -63,10 +64,15 @@
                     <div>
                         @Html.ActionLink("Delete", "Delete", new { id = post.ID })
                     </div>
+                   
                 }
                 else
                 {
-                    @Html.ActionLink("Details", "Details", new { id = post.ID })
+                   <div> 
+                         @Html.ActionLink("Details", "Details", new { id = post.ID }) 
+                   </div>
+
+                  
                 }
 
 

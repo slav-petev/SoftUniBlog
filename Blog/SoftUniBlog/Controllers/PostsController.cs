@@ -44,6 +44,7 @@ namespace SoftUniBlog.Controllers
 
             return View(post);
         }
+    
         
         // GET: Posts/Create
         [Authorize]
