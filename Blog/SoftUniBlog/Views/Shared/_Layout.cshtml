@@ -6,9 +6,18 @@
     <title>@ViewBag.Title - Flex 07</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-
+    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js'></script>
+<script type='text/javascript' src='loadImg.js'></script>
+<script type='text/javascript'>
+    $(function(){
+        $('img').imgPreload()
+    })
+</script>
 </head>
+
 <body>
+
+    <div class="se-pre-con"></div>
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -31,12 +40,12 @@
                     @*<li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Equipment <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">*@
-                            <li>@Html.ActionLink("Professional Equipment", "Index", "ProfessionalEquipment")</li>
-                            <li>@Html.ActionLink("Semi-Professional Equipment", "Index", "SemiProfessional")</li>
-                            <li>@Html.ActionLink("Cardio Equipment", "Index", "CardioEquipment")</li>
-                            <li>@Html.ActionLink("Home Equipment", "Index", "HomeEquipment")</li>
-                        @*</ul>
-                    </li>*@
+                    <li>@Html.ActionLink("Professional Equipment", "Index", "ProfessionalEquipment")</li>
+                    <li>@Html.ActionLink("Semi-Professional Equipment", "Index", "SemiProfessional")</li>
+                    <li>@Html.ActionLink("Cardio Equipment", "Index", "CardioEquipment")</li>
+                    <li>@Html.ActionLink("Home Equipment", "Index", "HomeEquipment")</li>
+                    @*</ul>
+                        </li>*@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Contact us <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">

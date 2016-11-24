@@ -230,10 +230,6 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\CommentBox.mdf" />
-    <Content Include="App_Data\CommentBox_log.ldf">
-      <DependentUpon>CommentBox.mdf</DependentUpon>
-    </Content>
     <Content Include="App_Data\SoftUniBlog.mdf" />
     <Content Include="App_Data\SoftUniBlog_log.ldf">
       <DependentUpon>SoftUniBlog.mdf</DependentUpon>
