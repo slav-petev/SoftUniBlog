@@ -1,10 +1,10 @@
 ﻿@model SoftUniBlog.Models.Post
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "ReadMore";
 }
 
-<h2>Details</h2>
+<h2>Forum</h2>
 
 <div>
     <h4>Post</h4>
@@ -19,11 +19,11 @@
         </dd>
 
         <dt>
-            Body
+            Content
         </dt>
 
         <dd>
-            <textarea class="form-control text-box multi-line" disabled="disabled" rows="20">@Model.Body)</textarea>
+            @Html.DisplayFor(model => model.Body)
 
         </dd>
 
@@ -48,7 +48,7 @@
 <p>
     @if (ViewBag.IsUserAuthorized)
     {
-       @Html.ActionLink("Edit", "Edit", new { id = Model.ID })
+        @Html.ActionLink("Edit", "Edit", new { id = Model.ID })
     }
     @Html.ActionLink("Back to List", "Index")
 </p>

@@ -320,6 +320,7 @@
     <Content Include="Views\FoodAdditives\Index.cshtml" />
     <Content Include="Views\Contacts\Index.cshtml" />
     <Content Include="Views\CommentBox\View.cshtml" />
+    <Content Include="Views\Posts\ReadMore.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
