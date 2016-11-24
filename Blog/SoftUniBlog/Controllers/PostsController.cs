@@ -44,20 +44,7 @@ namespace SoftUniBlog.Controllers
 
             return View(post);
         }
-        public ActionResult ReadMore(int? id)
-        {
-            if(id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Post post = db.Posts.Find(id);
-            if(post == null)
-            {
-                return HttpNotFound();
-            }
-            ViewBag.IsUserAuthorized = IsUserAuthorized(post);
-            return View(post);
-        }
+    
         
         // GET: Posts/Create
         [Authorize]
