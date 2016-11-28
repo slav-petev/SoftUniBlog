@@ -13,12 +13,19 @@ namespace shanuMVCProfileImage.Controllers
     {
         public ActionResult Index()
         {
+
             return View();
         }
 
         public ActionResult ProffesionalEqipment()
         {
-            return View("ProffesionalEqipment");
+            var context = new ApplicationDbContext();
+
+            var equipmentTypes = context.EquipmentTypes.ToList();
+
+            ViewBag.EquipmentTypes = equipmentTypes;
+
+            return View("ProffesionalEquipment");
         }
 
 

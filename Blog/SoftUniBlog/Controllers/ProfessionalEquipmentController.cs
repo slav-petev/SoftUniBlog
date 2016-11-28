@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SoftUniBlog.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,6 +12,11 @@ namespace SoftUniBlog.Controllers
         // GET: ProfessionalEquipment
         public ActionResult Index()
         {
+            var context = new ApplicationDbContext();
+            var equipmentTypes = context.EquipmentTypes.ToList();
+
+            ViewBag.EquipmentTypes = equipmentTypes;
+
             return View();
         }
         public ActionResult Create()
@@ -19,6 +25,15 @@ namespace SoftUniBlog.Controllers
         }
 
         
+        public ActionResult ByType(string id)
+        {
+            var context = new ApplicationDbContext();
 
+            var equipments = context.Equipments.Where(a => a.Type.Name == id).ToList();
+
+            ViewBag.Equipments = equipments;
+
+            return View();
+        }
     }
 }

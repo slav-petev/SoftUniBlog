@@ -220,12 +220,14 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\ApplicationDbContext.cs" />
-    <Compile Include="Models\ApplicationUser.cs" />
-    <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\Comment.cs" />
-    <Compile Include="Models\Post.cs" />
+    <Compile Include="Migrations\Models\AccountViewModels.cs" />
+    <Compile Include="Migrations\Models\ApplicationDbContext.cs" />
+    <Compile Include="Migrations\Models\ApplicationUser.cs" />
+    <Compile Include="Migrations\Models\Equipment.cs" />
+    <Compile Include="Migrations\Models\EquipmentType.cs" />
+    <Compile Include="Migrations\Models\ManageViewModels.cs" />
+    <Compile Include="Migrations\Models\Comment.cs" />
+    <Compile Include="Migrations\Models\Post.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -241,17 +243,48 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Images\Club-Series-Treadmill-l.png" />
-    <Content Include="Images\noImg.png" />
-    <Content Include="Images\Profesional 1.png.png" />
-    <Content Include="Images\Professinal Bench Press.png" />
-    <Content Include="Images\Professional  Gladiator.png" />
-    <Content Include="Images\Professional  Squat Stand.png" />
-    <Content Include="Images\Professional Cardio Bike.png" />
-    <Content Include="Images\Professional Crossover.png" />
-    <Content Include="Images\Professional Leg Press.png" />
-    <Content Include="Images\Professional Scott Bench.png" />
-    <Content Include="Images\Professional Smith Machine.png" />
+    <Content Include="Images\Equipments\Standard Dumbbells.png" />
+    <Content Include="Images\EquipmentTypes\Cardio Bike.png" />
+    <Content Include="Images\EquipmentTypes\Club-Series-Treadmill-l.png" />
+    <Content Include="Images\EquipmentTypes\Complex Veloargometre.png" />
+    <Content Include="Images\EquipmentTypes\dumbbells.png" />
+    <Content Include="Images\EquipmentTypes\Fitness ball.png" />
+    <Content Include="Images\EquipmentTypes\Home Bench.png" />
+    <Content Include="Images\EquipmentTypes\Home Chin Dip Stand.png" />
+    <Content Include="Images\EquipmentTypes\Home Dummbells.png" />
+    <Content Include="Images\EquipmentTypes\Home Hyperextension Stand.png" />
+    <Content Include="Images\EquipmentTypes\Home Multi-functional Fitness Equipment.png" />
+    <Content Include="Images\EquipmentTypes\Home SigBenchRack.png" />
+    <Content Include="Images\EquipmentTypes\Home Treadmill.png" />
+    <Content Include="Images\EquipmentTypes\Home Veloargometre.png" />
+    <Content Include="Images\EquipmentTypes\Home Vertical Decline Bench Press.png" />
+    <Content Include="Images\EquipmentTypes\noImg.png" />
+    <Content Include="Images\EquipmentTypes\Professinal Bench Press.png" />
+    <Content Include="Images\EquipmentTypes\Professional  Gladiator.png" />
+    <Content Include="Images\EquipmentTypes\Professional  Squat Stand.png" />
+    <Content Include="Images\EquipmentTypes\Professional Cardio Bike.png" />
+    <Content Include="Images\EquipmentTypes\Professional Crossover.png" />
+    <Content Include="Images\EquipmentTypes\Professional Dips Machine.png" />
+    <Content Include="Images\EquipmentTypes\Professional Leg Press.png" />
+    <Content Include="Images\EquipmentTypes\Professional Scott Bench.png" />
+    <Content Include="Images\EquipmentTypes\Professional Smith Machine.png" />
+    <Content Include="Images\EquipmentTypes\Rowing Machine.png" />
+    <Content Include="Images\EquipmentTypes\Semi-Professional Dips Machine.png" />
+    <Content Include="Images\EquipmentTypes\Semi-Professional Bench Press.png" />
+    <Content Include="Images\EquipmentTypes\Semi-Professional Cardio Bike.png" />
+    <Content Include="Images\EquipmentTypes\Semi-Professional Crossover.png" />
+    <Content Include="Images\EquipmentTypes\Semi-Professional Gladiator.png" />
+    <Content Include="Images\EquipmentTypes\Semi-Professional Leg Press.png" />
+    <Content Include="Images\EquipmentTypes\Semi-Professional Scott Bench.png" />
+    <Content Include="Images\EquipmentTypes\Semi-Professional Smith Machine.png" />
+    <Content Include="Images\EquipmentTypes\Semi-Professional  Squat Stand.png" />
+    <Content Include="Images\EquipmentTypes\Semi-Professional Treadmill.png" />
+    <Content Include="Images\EquipmentTypes\Skipping Rope.png" />
+    <Content Include="Images\EquipmentTypes\Speedbike.png" />
+    <Content Include="Images\EquipmentTypes\Stepers.png" />
+    <Content Include="Images\EquipmentTypes\Treadmill.png" />
+    <Content Include="Images\EquipmentTypes\Veloargometre.png" />
+    <Content Include="Images\Equipments\vfX46.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -316,6 +349,7 @@
     <Content Include="Views\FoodAdditives\Index.cshtml" />
     <Content Include="Views\Contacts\Index.cshtml" />
     <Content Include="Views\CommentBox\View.cshtml" />
+    <Content Include="Views\ProfessionalEquipment\ByType.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

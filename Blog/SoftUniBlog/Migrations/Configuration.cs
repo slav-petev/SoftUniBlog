@@ -90,8 +90,36 @@ Even if there was good evidence for fiber type specific hypertrophy, and even if
                     authorUsername: "merry@gmail.com"
                 );
 
+                AddEquipmentType(context, "Dumbbells", "Dumbbells.png");
+
+                AddEquipment(context, "Standard Dumbbells", "Standard Dumbbells.png", context.EquipmentTypes.First(a => a.Name == "Dumbbells"));
+
                 context.SaveChanges();
             }
+        }
+
+        private void AddEquipment(ApplicationDbContext context, string name, string imagePath, EquipmentType equipmentType)
+        {
+            var equipment = new Equipment()
+            {
+                Name = name,
+                ImagePath = imagePath,
+                Type = equipmentType
+            };
+
+            context.Equipments.Add(equipment);
+        }
+
+        private void AddEquipmentType(ApplicationDbContext context, string name, string imagePath)
+        {
+            var equipmentType = new EquipmentType()
+            {
+                Name = name,
+                ImagePath = imagePath
+            };
+
+            context.EquipmentTypes.Add(equipmentType);
+            context.SaveChanges();
         }
 
         private void CreateUser(ApplicationDbContext context,
