@@ -16,7 +16,6 @@ namespace SoftUniBlog.Controllers
             var equipmentTypes = context.EquipmentTypes.ToList();
 
             ViewBag.EquipmentTypes = equipmentTypes;
-
             return View();
         }
         public ActionResult Create()
@@ -32,6 +31,7 @@ namespace SoftUniBlog.Controllers
             var equipments = context.Equipments.Where(a => a.Type.Name == id).ToList();
 
             ViewBag.Equipments = equipments;
+            ViewBag.Type = id;
 
             return View();
         }

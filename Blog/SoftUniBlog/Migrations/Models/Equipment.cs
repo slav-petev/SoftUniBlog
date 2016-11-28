@@ -7,6 +7,7 @@
         public string Name { get; set; }
 
         public string ImagePath { get; set; }
+        public Category Category { get; set; }
 
         public EquipmentType Type { get; set; }
     }

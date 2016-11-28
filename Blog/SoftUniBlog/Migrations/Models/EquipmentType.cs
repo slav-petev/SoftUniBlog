@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.IO;
 
 namespace SoftUniBlog.Models
 {
@@ -16,5 +17,18 @@ namespace SoftUniBlog.Models
         public string ImagePath { get; set; }
 
         public virtual ICollection<Equipment> Equipments { get; set; }
+
+        public static string NormalizeName(string name)
+        {
+            var illegalChars = Path.GetInvalidFileNameChars();
+
+            var normalizedName = name;
+            foreach (var character in illegalChars)
+            {
+                normalizedName = name.Replace(character, '-');
+            }            
+
+            return normalizedName;
+        }
     }
 }

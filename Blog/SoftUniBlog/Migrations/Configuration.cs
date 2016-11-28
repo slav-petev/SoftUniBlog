@@ -5,7 +5,11 @@ namespace SoftUniBlog.Migrations
     using SoftUniBlog.Models;
     using System;
     using System.Data.Entity.Migrations;
+    using System.IO;
     using System.Linq;
+    using System.Reflection;
+    using System.Web;
+    using System.Web.Hosting;
 
     internal sealed class Configuration : DbMigrationsConfiguration<ApplicationDbContext>
     {
@@ -90,21 +94,51 @@ Even if there was good evidence for fiber type specific hypertrophy, and even if
                     authorUsername: "merry@gmail.com"
                 );
 
-                AddEquipmentType(context, "Dumbbells", "Dumbbells.png");
+                var equipmentTypes = Directory.GetFiles(MapPath(@"~\Images\EquipmentTypes"))
+                    .Select(path => new
+                    {
+                        FileName = Path.GetFileNameWithoutExtension(path),
+                        Extension = Path.GetExtension(path)
+                    }
+                    ).ToArray();
 
-                AddEquipment(context, "Standard Dumbbells", "Standard Dumbbells.png", context.EquipmentTypes.First(a => a.Name == "Dumbbells"));
+                foreach (var equipmentType in equipmentTypes)
+                {
+                    var imagePath = $"{equipmentType.FileName}{equipmentType.Extension}";
+                    AddEquipmentType(context, equipmentType.FileName, imagePath);
+                }
+
+                // AddEquipment(context, "Standard Dumbbells", "Standard Dumbbells.png", context.EquipmentTypes.First(a => a.Name == "Dumbbells"));
+                // AddEquipment(context, "Home Bench", "Home Bench.png", context.EquipmentTypes.First(a => a.Name == "Home Bench"));
+
+                foreach (var category in Directory.GetDirectories(MapPath(@"~\Images\Equipment")))
+                {
+                    foreach (var type in Directory.GetDirectories(category))
+                    {
+                        foreach (var equipment in Directory.GetFiles(type))
+                        {
+                            var name = string.Empty; //TODO: implement
+                            var extension = string.Empty; //TODO: implement
+                            var imagePath = $"{name}{extension}";
+
+                            AddEquipment(context, name, imagePath, category, type);
+                        }
+                    }
+                }
 
                 context.SaveChanges();
             }
         }
 
-        private void AddEquipment(ApplicationDbContext context, string name, string imagePath, EquipmentType equipmentType)
+        private void AddEquipment(ApplicationDbContext context, string name, string imagePath, string category, string type)
         {
+            var equipmentType = context.EquipmentTypes.First(a => a.Name == type);
             var equipment = new Equipment()
             {
                 Name = name,
                 ImagePath = imagePath,
-                Type = equipmentType
+                Type = equipmentType,
+                Category = (Category)Enum.Parse(typeof(Category), category)
             };
 
             context.Equipments.Add(equipment);
@@ -183,6 +217,19 @@ Even if there was good evidence for fiber type specific hypertrophy, and even if
             post.Author = context.Users.Where(u => u.UserName == authorUsername).FirstOrDefault();
             context.Posts.Add(post);
         }
+        private string MapPath(string seedFile)
+        {
+            if (HttpContext.Current != null)
+                return HostingEnvironment.MapPath(seedFile);
+
+            var absolutePath = new Uri(Assembly.GetExecutingAssembly().CodeBase).AbsolutePath;
+            var directoryName = Path.GetDirectoryName(absolutePath);
+            var path = Path.Combine(directoryName, ".." + seedFile.TrimStart('~').Replace('/', '\\'));
+
+            return path;
+        }
     }
+
+
 }
 

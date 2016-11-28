@@ -223,6 +223,7 @@
     <Compile Include="Migrations\Models\AccountViewModels.cs" />
     <Compile Include="Migrations\Models\ApplicationDbContext.cs" />
     <Compile Include="Migrations\Models\ApplicationUser.cs" />
+    <Compile Include="Migrations\Models\Category.cs" />
     <Compile Include="Migrations\Models\Equipment.cs" />
     <Compile Include="Migrations\Models\EquipmentType.cs" />
     <Compile Include="Migrations\Models\ManageViewModels.cs" />
@@ -243,7 +244,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Images\Equipments\Standard Dumbbells.png" />
     <Content Include="Images\EquipmentTypes\Cardio Bike.png" />
     <Content Include="Images\EquipmentTypes\Club-Series-Treadmill-l.png" />
     <Content Include="Images\EquipmentTypes\Complex Veloargometre.png" />
@@ -284,7 +284,9 @@
     <Content Include="Images\EquipmentTypes\Stepers.png" />
     <Content Include="Images\EquipmentTypes\Treadmill.png" />
     <Content Include="Images\EquipmentTypes\Veloargometre.png" />
-    <Content Include="Images\Equipments\vfX46.jpg" />
+    <Content Include="Images\Equipment\Home\Standard Dumbbells.png" />
+    <Content Include="Images\Equipment\vfX46.jpg" />
+    <Content Include="Images\noImg.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -351,7 +353,10 @@
     <Content Include="Views\CommentBox\View.cshtml" />
     <Content Include="Views\ProfessionalEquipment\ByType.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Images\Equipment\Cardio\" />
+    <Folder Include="Images\Equipment\Professional\Dumbbells\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />

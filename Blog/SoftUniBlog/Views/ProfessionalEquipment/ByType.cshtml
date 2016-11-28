@@ -3,12 +3,12 @@
 }
 
 @{
-    ViewBag.Title = "Equipment by type {0}";
+    ViewBag.Title = "Equipment by type " + ViewBag.Type;
 }
 
 <h2>Index</h2>
 
-<p>Professional Equipment With type {0}!</p>
+<p>Professional Equipment With type @ViewBag.Type!</p>
 
 @using SoftUniBlog.Models
 @{
