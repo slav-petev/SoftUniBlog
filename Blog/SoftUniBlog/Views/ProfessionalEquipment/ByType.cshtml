@@ -16,7 +16,7 @@
 }
 @foreach (var equipment in equipments)
 {
-    <li><img src="~/Images/Equipments/@equipment.ImagePath" width="300" height="300" /><span>@equipment.Name</span></li>
+    <li><img src="@equipment.ImagePath" width="300" height="300" /><span>@equipment.Name</span></li>
 }
 
 @*<ul class="icons">

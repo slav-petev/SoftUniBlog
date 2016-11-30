@@ -17,7 +17,7 @@
 @foreach (var equipmentType in equipmentTypes)
 {
     var type = equipmentType.Name;
-    <li><a href="ProfessionalEquipment/ByType/@type"><img src="~/Images/EquipmentTypes/@equipmentType.ImagePath" width="300" height="300" /><span>@equipmentType.Name</span></a></li>
+    <li><a href="ProfessionalEquipment/ByType/@type"><img src="@equipmentType.ImagePath" width="300" height="300" /><span>@equipmentType.Name</span></a></li>
 }
 
 @*<ul class="icons">

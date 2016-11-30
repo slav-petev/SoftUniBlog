@@ -94,32 +94,30 @@ Even if there was good evidence for fiber type specific hypertrophy, and even if
                     authorUsername: "merry@gmail.com"
                 );
 
-                var equipmentTypes = Directory.GetFiles(MapPath(@"~\Images\EquipmentTypes"))
-                    .Select(path => new
-                    {
-                        FileName = Path.GetFileNameWithoutExtension(path),
-                        Extension = Path.GetExtension(path)
-                    }
-                    ).ToArray();
-
-                foreach (var equipmentType in equipmentTypes)
+                foreach (var categoryPath in Directory.GetDirectories(MapPath(@"~\Images\Equipment")))
                 {
-                    var imagePath = $"{equipmentType.FileName}{equipmentType.Extension}";
-                    AddEquipmentType(context, equipmentType.FileName, imagePath);
-                }
+                    var category = categoryPath.Substring(categoryPath.LastIndexOf('\\') + 1);
 
-                // AddEquipment(context, "Standard Dumbbells", "Standard Dumbbells.png", context.EquipmentTypes.First(a => a.Name == "Dumbbells"));
-                // AddEquipment(context, "Home Bench", "Home Bench.png", context.EquipmentTypes.First(a => a.Name == "Home Bench"));
-
-                foreach (var category in Directory.GetDirectories(MapPath(@"~\Images\Equipment")))
-                {
-                    foreach (var type in Directory.GetDirectories(category))
+                    foreach (var typePath in Directory.GetDirectories(categoryPath))
                     {
-                        foreach (var equipment in Directory.GetFiles(type))
+                        var type = typePath.Substring(typePath.LastIndexOf('\\') + 1);
+
+                        var typeEntity = context.EquipmentTypes.FirstOrDefault(a => a.Name == type);
+                        if (typeEntity == null)
                         {
-                            var name = string.Empty; //TODO: implement
-                            var extension = string.Empty; //TODO: implement
-                            var imagePath = $"{name}{extension}";
+                            var equipmentTypeName = type;
+
+                            var imagePath = $@"/Images/Types/{type}.png";
+
+                            AddEquipmentType(context, type, imagePath);
+                        }
+
+
+                        foreach (var equipmentFilename in Directory.GetFiles(typePath))
+                        {
+                            var name = Path.GetFileNameWithoutExtension(equipmentFilename);
+                            var extension = Path.GetExtension(equipmentFilename);
+                            var imagePath = $@"/Images/Equipment/{category}/{type}/{name}{extension}";
 
                             AddEquipment(context, name, imagePath, category, type);
                         }
@@ -133,6 +131,7 @@ Even if there was good evidence for fiber type specific hypertrophy, and even if
         private void AddEquipment(ApplicationDbContext context, string name, string imagePath, string category, string type)
         {
             var equipmentType = context.EquipmentTypes.First(a => a.Name == type);
+
             var equipment = new Equipment()
             {
                 Name = name,
