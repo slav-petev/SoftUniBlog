@@ -32,18 +32,17 @@
 
                 <ul class="nav navbar-nav">
                     <li>
-                        <img src="@Url.Action("UserPhotos", "Home" )" height="48" width="48" />
+                        <img src="@Url.Action("UserPhotos", "Home" )" height="73" width="73" />
 
                     </li>
 
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     @*<li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Equipment <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">*@
-                    <li>@Html.ActionLink("Professional Equipment", "Index", "ProfessionalEquipment")</li>
-                    <li>@Html.ActionLink("Semi-Professional Equipment", "Index", "SemiProfessional")</li>
-                    <li>@Html.ActionLink("Cardio Equipment", "Index", "CardioEquipment")</li>
-                    <li>@Html.ActionLink("Home Equipment", "Index", "HomeEquipment")</li>
+                    <li class="hvr-bounce-out">@Html.ActionLink("Professional Equipment", "Index", "ProfessionalEquipment")</li>
+                    <li class="hvr-bounce-out">@Html.ActionLink("Semi-Professional Equipment", "Index", "SemiProfessional")</li>
+                    <li class="hvr-bounce-out">@Html.ActionLink("Cardio Equipment", "Index", "CardioEquipment")</li>
+                    <li class="hvr-bounce-out">@Html.ActionLink("Home Equipment", "Index", "HomeEquipment")</li>
                     @*</ul>
                         </li>*@
                     <li class="dropdown">
@@ -71,4 +70,10 @@
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 </body>
+<!-- SCM Music Player http://scmplayer.net -->
+<script type="text/javascript" src="http://scmplayer.net/script.js"
+        data-config="{'skin':'skins/black/skin.css','volume':25,'autoplay':true,'shuffle':false,'repeat':0,'placement':'top','showplaylist':false,'playlist':[{'title':'','url':'https://www.youtube.com/watch?v=p2ZljzdGPUg'},{'title':'','url':'https://www.youtube.com/watch?v=tBZD9m50tP0'},{'title':'','url':'https://www.youtube.com/watch?v=orTi-PUXXy4'},{'title':'','url':'https://www.youtube.com/watch?v=ZpUYjpKg9KY'}]}"></script>
+<!-- SCM Music Player script end -->
+
+    
 </html>
