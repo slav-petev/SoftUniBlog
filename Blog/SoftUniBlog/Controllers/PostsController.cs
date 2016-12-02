@@ -147,6 +147,10 @@ namespace SoftUniBlog.Controllers
             var context = new ApplicationDbContext();
 
             var currentUserUsername = User.Identity.Name;
+            if (currentUserUsername == null)
+            {
+                RedirectToAction("Login");
+            }
             var currentUser = context.Users.First(a => a.Email == currentUserUsername);
 
             bool isAuthorized;
