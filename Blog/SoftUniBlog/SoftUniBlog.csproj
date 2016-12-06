@@ -237,6 +237,7 @@
     <Content Include="App_Data\CommentBox_log.ldf">
       <DependentUpon>CommentBox.mdf</DependentUpon>
     </Content>
+    <Content Include="Content\bg.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
@@ -304,6 +305,7 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="videos\video.mp4" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

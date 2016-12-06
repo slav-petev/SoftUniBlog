@@ -32,7 +32,7 @@
 
                 <ul class="nav navbar-nav">
                     <li>
-                        <img src="@Url.Action("UserPhotos", "Home" )" height="73" width="73" />
+                        <img src="@Url.Action("UserPhotos", "Home" )" height="40" width="40" />
 
                     </li>
 
@@ -69,11 +69,12 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+
+    <script type="text/javascript" src="http://scmplayer.net/script.js"
+            data-config="{'skin':'skins/black/skin.css','volume':30,'autoplay':true,'shuffle':false,'repeat':1,'placement':'top','showplaylist':false,'playlist':[{'title':'','url':'https://www.youtube.com/watch?v=wUgglSOEvcw'},{'title':'','url':'https://www.youtube.com/watch?v=tkgBMHB3zN8'},{'title':'','url':'https://www.youtube.com/watch?v=DXD--t6tFAU'},{'title':'','url':'https://www.youtube.com/watch?v=eZskc6Aa6mE'},{'title':'','url':'https://www.youtube.com/watch?v=gf0NcUfvoZY'},{'title':'','url':'https://www.youtube.com/watch?v=wBjHPqMz0q0'}]}"></script>
+
+
 </body>
-<!-- SCM Music Player http://scmplayer.net -->
-<script type="text/javascript" src="http://scmplayer.net/script.js"
-        data-config="{'skin':'skins/black/skin.css','volume':25,'autoplay':true,'shuffle':false,'repeat':0,'placement':'top','showplaylist':false,'playlist':[{'title':'','url':'https://www.youtube.com/watch?v=p2ZljzdGPUg'},{'title':'','url':'https://www.youtube.com/watch?v=tBZD9m50tP0'},{'title':'','url':'https://www.youtube.com/watch?v=orTi-PUXXy4'},{'title':'','url':'https://www.youtube.com/watch?v=ZpUYjpKg9KY'}]}"></script>
-<!-- SCM Music Player script end -->
 
     
 </html>
