@@ -1,0 +1,17 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    ViewBag.Title = "Equipment by type " + ViewBag.Type;
+}
+
+
+@using SoftUniBlog.Models
+@{
+    List<Equipment> equipments = ViewBag.Equipments;
+}
+@foreach (var equipment in equipments)
+{
+    <li><img src="@equipment.ImagePath" width="300" height="300" /><span>@equipment.Name</span></li>
+}

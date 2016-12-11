@@ -208,6 +208,7 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PostsController.cs" />
     <Compile Include="Controllers\ProfessionalEquipmentController.cs" />
+    <Compile Include="Controllers\SearchController.cs" />
     <Compile Include="Controllers\SemiProfessionalController.cs" />
     <Compile Include="feedback.aspx.cs">
       <DependentUpon>feedback.aspx</DependentUpon>
@@ -233,13 +234,10 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\CommentBox.mdf" />
-    <Content Include="App_Data\CommentBox_log.ldf">
-      <DependentUpon>CommentBox.mdf</DependentUpon>
-    </Content>
     <Content Include="Content\bg.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\search.css" />
     <Content Include="favicon.ico" />
     <Content Include="feedback.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -354,10 +352,14 @@
     <Content Include="Views\Contacts\Index.cshtml" />
     <Content Include="Views\CommentBox\View.cshtml" />
     <Content Include="Views\ProfessionalEquipment\ByType.cshtml" />
+    <Content Include="Views\SemiProfessional\ByType.cshtml" />
+    <Content Include="Views\SemiProfessional\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Data\" />
     <Folder Include="Images\Equipment\Cardio\" />
     <Folder Include="Images\Equipment\Professional\Dumbbells\" />
+    <Folder Include="Views\Search\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
