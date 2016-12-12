@@ -13,12 +13,61 @@
         $('img').imgPreload()
     })
 </script>
+
+    <style>
+.button {
+  padding: 3px 3px;
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #620a0a;
+  background-color: #620a0a;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0px #999;
+}
+.buttonss {
+  padding: 3px 3px;
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #000000;
+  background-color: #000000;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0px #999;
+}
+
+.buttons {
+  padding: 5px 5px;
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #620a0a;
+  background-color: #000000;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 2px #999;
+}
+
+.button:hover {background-color: #051838; }
+
+.button:active {
+  background-color: #051838;
+  /*box-shadow: 0 5px #666;*/
+  transform: translateY(4px);
+}
+</style>
+
 </head>
 
 <body>
 
     <div class="se-pre-con"></div>
-    <div class="navbar navbar-inverse navbar-fixed-top"  style="background-color: transparent">
+    <div class="button navbar-inverse navbar-fixed-top"  style="background-color: black">
         <div class="container-fluid">
             <div class="navbar-inner">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
@@ -26,7 +75,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Fitness Equipment", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+              
             </div>
             <div class="navbar-collapse collapse">
 
@@ -39,14 +88,15 @@
                     @*<li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Equipment <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">*@
-                    <li class="hvr-bounce-out">@Html.ActionLink("Professional Equipment", "Index", "ProfessionalEquipment")</li>
-                    <li class="hvr-bounce-out">@Html.ActionLink("Semi-Professional Equipment", "Index", "SemiProfessional")</li>
-                    <li class="hvr-bounce-out">@Html.ActionLink("Cardio Equipment", "Index", "CardioEquipment")</li>
-                    <li class="hvr-bounce-out">@Html.ActionLink("Home Equipment", "Index", "HomeEquipment")</li>
+                    <li class="buttonss"> @Html.ActionLink("Fitness Equipment", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" }) </li>
+                    <li class="buttons">@Html.ActionLink("Professional Equipment", "Index", "ProfessionalEquipment")</li>
+                    <li class="buttons">@Html.ActionLink("Semi-Professional Equipment", "Index", "SemiProfessional")</li>
+                    <li class="buttons">@Html.ActionLink("Cardio Equipment", "Index", "CardioEquipment")</li>
+                    <li class="buttons">@Html.ActionLink("Home Equipment", "Index", "HomeEquipment")</li>
 
                     @*</ul>
                         </li>*@
-                    <li class="dropdown">
+                    <li class="buttons">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Contact us <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
                             <li>@Html.ActionLink("Forum", "Index", "Posts")</li>
