@@ -4,7 +4,18 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<head>
+    <title>Details</title>
+</head>
+<style>
+    body {
+        background-image: url('http://www.careandliving.com/wp-content/uploads/2016/08/muscular-guy-six-pack-HD.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+    }
+</style>
+
 
 <div>
     <h4>Post</h4>
@@ -23,7 +34,7 @@
         </dt>
 
         <dd>
-            <textarea class="form-control text-box multi-line" disabled="disabled" rows="20">@Model.Body)</textarea>
+            <textarea class="form-control text-box multi-line" disabled="disabled" rows="20">@Model.Body) </textarea>
 
         </dd>
 
