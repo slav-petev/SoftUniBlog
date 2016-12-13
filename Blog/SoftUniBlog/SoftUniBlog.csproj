@@ -243,9 +243,12 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\EquipmentTypes\BenchRack.png" />
     <Content Include="Images\EquipmentTypes\Cardio Bike.png" />
     <Content Include="Images\EquipmentTypes\Club-Series-Treadmill-l.png" />
     <Content Include="Images\EquipmentTypes\Complex Veloargometre.png" />
+    <Content Include="Images\EquipmentTypes\Dumbbell Injetadoliso principal.png" />
+    <Content Include="Images\EquipmentTypes\Dumbbells Black.png" />
     <Content Include="Images\EquipmentTypes\dumbbells.png" />
     <Content Include="Images\EquipmentTypes\Fitness ball.png" />
     <Content Include="Images\EquipmentTypes\Home Bench.png" />
@@ -257,6 +260,8 @@
     <Content Include="Images\EquipmentTypes\Home Treadmill.png" />
     <Content Include="Images\EquipmentTypes\Home Veloargometre.png" />
     <Content Include="Images\EquipmentTypes\Home Vertical Decline Bench Press.png" />
+    <Content Include="Images\EquipmentTypes\New Bench.png" />
+    <Content Include="Images\EquipmentTypes\New Dummbels.png" />
     <Content Include="Images\EquipmentTypes\noImg.png" />
     <Content Include="Images\EquipmentTypes\Professinal Bench Press.png" />
     <Content Include="Images\EquipmentTypes\Professional  Gladiator.png" />
@@ -267,6 +272,7 @@
     <Content Include="Images\EquipmentTypes\Professional Leg Press.png" />
     <Content Include="Images\EquipmentTypes\Professional Scott Bench.png" />
     <Content Include="Images\EquipmentTypes\Professional Smith Machine.png" />
+    <Content Include="Images\EquipmentTypes\Round Rubber Dumbbells.png" />
     <Content Include="Images\EquipmentTypes\Rowing Machine.png" />
     <Content Include="Images\EquipmentTypes\Semi-Professional Dips Machine.png" />
     <Content Include="Images\EquipmentTypes\Semi-Professional Bench Press.png" />
