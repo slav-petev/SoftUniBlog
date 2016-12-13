@@ -302,6 +302,8 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\snowstorm-min.js" />
+    <Content Include="Scripts\snowstorm.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="videos\video.mp4" />
     <Content Include="videos\wallup-258469.jpg" />
