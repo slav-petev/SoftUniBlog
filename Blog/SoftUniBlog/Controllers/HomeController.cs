@@ -68,6 +68,17 @@ namespace shanuMVCProfileImage.Controllers
 
             }
         }
+        public ActionResult SearchText(string text)
+        {
+            var context = new ApplicationDbContext();
+
+            var equipments = context.Equipments.Where(a => a.Name == text).ToList();
+
+            ViewBag.Equipments = equipments;
+            ViewBag.text = text;
+
+            return View();
+        }
 
     }
 }

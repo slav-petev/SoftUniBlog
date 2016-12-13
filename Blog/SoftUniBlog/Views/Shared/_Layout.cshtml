@@ -91,11 +91,18 @@
                     <li class="buttonss"> @Html.ActionLink("Fitness Equipment", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" }) </li>
                     <li class="buttons">@Html.ActionLink("Professional Equipment", "Index", "ProfessionalEquipment")</li>
                     <li class="buttons">@Html.ActionLink("Semi-Professional Equipment", "Index", "SemiProfessional")</li>
-                    <li class="buttons">@Html.ActionLink("Cardio Equipment", "Index", "CardioEquipment")</li>
                     <li class="buttons">@Html.ActionLink("Home Equipment", "Index", "HomeEquipment")</li>
+                    
+                                        @*</ul>
+            @using (Html.BeginForm("SearchText", "Home Controller", FormMethod.Get))
+        {
+            @Html.TextBoxFor(m => m.Query)
 
-                    @*</ul>
-                        </li>*@
+            <div>
+                <input type="submit" value="Search" />
+            </div>
+        }
+            </li>*@
                     <li class="buttons">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Contact us <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
