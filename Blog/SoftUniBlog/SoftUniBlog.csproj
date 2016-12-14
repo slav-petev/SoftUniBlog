@@ -292,6 +292,7 @@
     <Content Include="Images\Equipment\Home\Standard Dumbbells.png" />
     <Content Include="Images\Equipment\vfX46.jpg" />
     <Content Include="Images\noImg.png" />
+    <Content Include="Scripts\animatedbackground.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -357,9 +358,7 @@
     <Content Include="Views\ProfessionalEquipment\Index.cshtml" />
     <Content Include="Views\ProfessionalEquipment\Create.cshtml" />
     <Content Include="Views\SemiProfessional\Index.cshtml" />
-    <Content Include="Views\CardioEquipment\Index.cshtml" />
     <Content Include="Views\HomeEquipment\Index.cshtml" />
-    <Content Include="Views\FoodAdditives\Index.cshtml" />
     <Content Include="Views\Contacts\Index.cshtml" />
     <Content Include="Views\CommentBox\View.cshtml" />
     <Content Include="Views\ProfessionalEquipment\ByType.cshtml" />

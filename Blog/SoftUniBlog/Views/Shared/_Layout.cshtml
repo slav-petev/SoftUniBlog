@@ -40,8 +40,6 @@
   border-radius: 10px;
   box-shadow: 0 0px #999;
 }
-
-/*i5ejhrpejoh*/
 .buttons {
   padding: 1px 1px;
   font-size: 18px;
@@ -67,7 +65,6 @@
 </head>
 
 <body>
-
     <div class="se-pre-con"></div>
     <div class="button navbar-inverse navbar-fixed-top"  style="background-color: black">
         <div class="container-fluid">
@@ -124,10 +121,10 @@
     </div>
     <div class="container body-content">
         @RenderBody()
-        <hr />
+        @*<hr />
         <footer id="footer">
             <p>&copy; @DateTime.Now.Year - Flex 07</p>
-        </footer>
+        </footer>*@
     </div>
 
     @Scripts.Render("~/bundles/jquery")
@@ -135,7 +132,7 @@
     @RenderSection("scripts", required: false)
 
     <script type="text/javascript" src="http://scmplayer.net/script.js"
-            data-config="{'skin':'skins/black/skin.css','volume':30,'autoplay':true,'shuffle':false,'repeat':1,'placement':'top','showplaylist':false,'playlist':[{'title':'','url':'https://www.youtube.com/watch?v=eZskc6Aa6mE'},{'title':'','url':'https://www.youtube.com/watch?v=gf0NcUfvoZY'},{'title':'','url':'https://www.youtube.com/watch?v=wBjHPqMz0q0'}]}"></script>
+            data-config="{'skin':'skins/black/skin.css','volume':30,'autoplay':false,'shuffle':false,'repeat':1,'placement':'top','showplaylist':false,'playlist':[{'title':'','url':'https://www.youtube.com/watch?v=eZskc6Aa6mE'},{'title':'','url':'https://www.youtube.com/watch?v=gf0NcUfvoZY'},{'title':'','url':'https://www.youtube.com/watch?v=wBjHPqMz0q0'}]}"></script>
 
 
 </body>
