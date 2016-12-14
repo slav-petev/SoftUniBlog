@@ -243,37 +243,44 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Images\EquipmentTypes\BenchRack.png" />
-    <Content Include="Images\EquipmentTypes\Cardio Bike.png" />
+    <Content Include="Images\EquipmentTypes\Bench Rack.png" />
+    <Content Include="Images\EquipmentTypes\Olympic Bench Press.png" />
+    <Content Include="Images\EquipmentTypes\Professional  Gladiator.png" />
+    <Content Include="Images\EquipmentTypes\Professional  Squat Stand.png" />
+    <Content Include="Images\EquipmentTypes\Professional Dumbbells.png" />
+    <Content Include="Images\Equipment\Professional\Cardio\Professional Cardio Bike.png" />
     <Content Include="Images\EquipmentTypes\Club-Series-Treadmill-l.png" />
+    <Content Include="Images\EquipmentTypes\Complex Dummbells.png" />
     <Content Include="Images\EquipmentTypes\Complex Veloargometre.png" />
     <Content Include="Images\EquipmentTypes\Dumbbell Injetadoliso principal.png" />
     <Content Include="Images\EquipmentTypes\Dumbbells Black.png" />
     <Content Include="Images\EquipmentTypes\dumbbells.png" />
     <Content Include="Images\EquipmentTypes\Fitness ball.png" />
     <Content Include="Images\EquipmentTypes\Home Bench.png" />
+    <Content Include="Images\EquipmentTypes\Home Cardio Bike.png" />
     <Content Include="Images\EquipmentTypes\Home Chin Dip Stand.png" />
     <Content Include="Images\EquipmentTypes\Home Dummbells.png" />
     <Content Include="Images\EquipmentTypes\Home Hyperextension Stand.png" />
     <Content Include="Images\EquipmentTypes\Home Multi-functional Fitness Equipment.png" />
     <Content Include="Images\EquipmentTypes\Home SigBenchRack.png" />
+    <Content Include="Images\EquipmentTypes\Home SigBenchRack.png" />
     <Content Include="Images\EquipmentTypes\Home Treadmill.png" />
     <Content Include="Images\EquipmentTypes\Home Veloargometre.png" />
     <Content Include="Images\EquipmentTypes\Home Vertical Decline Bench Press.png" />
     <Content Include="Images\EquipmentTypes\New Bench.png" />
-    <Content Include="Images\EquipmentTypes\New Dummbels.png" />
+    <Content Include="Images\EquipmentTypes\Pro Dumbbells.png" />
     <Content Include="Images\EquipmentTypes\noImg.png" />
-    <Content Include="Images\EquipmentTypes\OlympicBenchPress.png" />
+    <Content Include="Images\Equipment\Professional\Bench\Olympic Bench Press.png" />
     <Content Include="Images\EquipmentTypes\Professinal Hyperextension Stand.png" />
-    <Content Include="Images\EquipmentTypes\Professional  Gladiator.png" />
-    <Content Include="Images\EquipmentTypes\Professional  Squat Stand.png" />
+    <Content Include="Images\Equipment\Professional\Fitness Machines\Professional  Gladiator.png" />
+    <Content Include="Images\Equipment\Professional\Stands\Professional  Squat Stand.png" />
     <Content Include="Images\EquipmentTypes\Professional Cardio Bike.png" />
     <Content Include="Images\EquipmentTypes\Professional Crossover.png" />
     <Content Include="Images\EquipmentTypes\Professional Dip Chin Stand.png" />
     <Content Include="Images\EquipmentTypes\Professional Dips Machine.png" />
-    <Content Include="Images\EquipmentTypes\Professional Dumbbells.png" />
+    <Content Include="Images\Equipment\Professional\Dumbbells\Professional Dumbbells.png" />
     <Content Include="Images\EquipmentTypes\Professional Leg Press.png" />
-    <Content Include="Images\EquipmentTypes\Professional Scott Bench.png" />
+    <Content Include="Images\EquipmentTypes\Professional Scott Stand.png" />
     <Content Include="Images\EquipmentTypes\Professional Smith Machine.png" />
     <Content Include="Images\EquipmentTypes\Professional Rack Stand.png" />
     <Content Include="Images\EquipmentTypes\Round Rubber Dumbbells.png" />
@@ -294,7 +301,7 @@
     <Content Include="Images\EquipmentTypes\Stepers.png" />
     <Content Include="Images\EquipmentTypes\Professional  Treadmill.png" />
     <Content Include="Images\EquipmentTypes\Veloargometre.png" />
-    <Content Include="Images\Equipment\Home\Standard Dumbbells.png" />
+    <Content Include="Images\EquipmentTypes\Home Dumbbells.png" />
     <Content Include="Images\Equipment\vfX46.jpg" />
     <Content Include="Images\noImg.png" />
     <Content Include="Scripts\bootstrap.js" />
@@ -302,6 +309,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Images\EquipmentTypes\Bench Press Upper Chest.png" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -374,7 +382,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Images\Equipment\Cardio\" />
-    <Folder Include="Images\Equipment\Professional\Dumbbells\" />
+    <Folder Include="Images\Equipment\Home\" />
     <Folder Include="Views\Search\" />
   </ItemGroup>
   <ItemGroup>
