@@ -276,4 +276,4 @@ __pycache__/
 
 #Code first generated database
 *.mdf
-*-log.ldf
+*.ldf

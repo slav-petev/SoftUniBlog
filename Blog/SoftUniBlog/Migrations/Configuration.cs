@@ -2,7 +2,7 @@ namespace SoftUniBlog.Migrations
 {
     using Microsoft.AspNet.Identity;
     using Microsoft.AspNet.Identity.EntityFramework;
-    using SoftUniBlog.Models;
+    using Models;
     using System;
     using System.Data.Entity.Migrations;
     using System.IO;

@@ -197,7 +197,6 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="classes\Utils.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CardioEquipmentController.cs" />
     <Compile Include="Controllers\CommentBoxController.cs" />
@@ -210,6 +209,7 @@
     <Compile Include="Controllers\ProfessionalEquipmentController.cs" />
     <Compile Include="Controllers\SearchController.cs" />
     <Compile Include="Controllers\SemiProfessionalController.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
