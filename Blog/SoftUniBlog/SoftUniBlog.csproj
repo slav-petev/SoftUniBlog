@@ -210,13 +210,6 @@
     <Compile Include="Controllers\ProfessionalEquipmentController.cs" />
     <Compile Include="Controllers\SearchController.cs" />
     <Compile Include="Controllers\SemiProfessionalController.cs" />
-    <Compile Include="feedback.aspx.cs">
-      <DependentUpon>feedback.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="feedback.aspx.designer.cs">
-      <DependentUpon>feedback.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -239,7 +232,6 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\search.css" />
     <Content Include="favicon.ico" />
-    <Content Include="feedback.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
