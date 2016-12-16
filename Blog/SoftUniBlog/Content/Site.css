@@ -39,3 +39,48 @@
   -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
   transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
 }
+
+.button {
+  padding: 1px 1px;
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #620a0a;
+  background-color: #620a0a;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0px #999;
+}
+.buttonss {
+  padding: 1px 1px;
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #000000;
+  background-color: #000000;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0px #999;
+}
+.buttons {
+  padding: 1px 1px;
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #620a0a;
+  background-color: #000000;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 2px #999;
+}
+
+.button:hover {background-color: #051838; }
+
+.buttons:active {
+  background-color: #051838;
+  /*box-shadow: 0 5px #666;*/
+  transform: translateY(4px);
+}
